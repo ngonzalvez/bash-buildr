@@ -1,4 +1,4 @@
-buildr.cfg
+.buildrrc
 dest/
 *.swp
 *.swo
