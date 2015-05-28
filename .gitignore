@@ -1,2 +1,4 @@
 buildr.cfg
 dest/js/app.js
+*.swp
+*.swo
