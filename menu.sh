@@ -16,7 +16,7 @@ function Menu_handle_option {
 
 		"Compile SCSS")
 			clear
-			echo "SCSS Compilation [To be implemented]"; echo
+			CSS_compress
 			Menu_show
 			;;
 

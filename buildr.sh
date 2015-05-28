@@ -3,6 +3,7 @@
 # Import dependencies.
 . ./config.sh
 . ./javascript.sh
+. ./css.sh
 . ./watch.sh
 . ./menu.sh
 
