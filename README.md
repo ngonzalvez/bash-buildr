@@ -15,8 +15,8 @@ In order to try it out run ```sh buildr.sh```. A menu will be displayed for you 
 
 - Select **(1) Compress JS**. 
 - Enter the path to js files: `js/*.js`.
-- Enter the path to the directory where the compiled files will be `dest/js`.
-- Enter the name of the compiled JS `app.js`.
+- Enter the path to the directory where the compiled files will be located: `dest/js`.
+- Enter the name of the compiled JS: `app.js`.
 
 Now you'll see a message saying that your JS files were compressed. Same steps apply for CSS compression.
 
