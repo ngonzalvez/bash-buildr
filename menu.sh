@@ -14,7 +14,7 @@ function Menu_handle_option {
 			exit
 			;;
 
-		"Compile SCSS")
+		"Compile CSS")
 			clear
 			CSS_compress
 			Menu_show
