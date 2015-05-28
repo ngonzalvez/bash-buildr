@@ -8,12 +8,16 @@ Therefore, I'm trying to make this tool as performant as possible through a simp
 
 #### Dependencies
 - inotify-tools
+- uglify-js (global npm module)
 
 #### Usage
 In order to try it out run ```sh buildr.sh```. A menu will be displayed for you to choose an option. 
 
-Select **(1) Concat JS**. The first time you'll be asked for a path to js files and destination file. Enter `js/*.js` as source and `dest/js/` as destination path. 
+- Select **(1) Compress JS**. 
+- Enter the path to js files
+- Enter the path to the directory where the compiled files will be.
+- Enter the name of the compiled JS.
 
-Now you'll see a message saying your JS files were concatenated. 
+Now you'll see a message saying your JS files were concatenated. Same steps apply for CSS compression.
 
 For automatic concatenation on each change to a JS file select **(3) Watch for changes**
