@@ -7,12 +7,12 @@
 . ./menu.sh
 
 # Show an intro message.
-function print_intro {
+function App_intro_message {
 	echo Please select an option from the list bellow.
 	echo
 }
 
 # Initialize the app.
-load_config
-print_intro
-show_menu
+Config_load
+App_intro_message
+Menu_show

@@ -1,8 +1,14 @@
 #!/bin/bash
 
-# Define a handler for each option.
-function handle_option {
-	case $1 in
+#
+# Handle the option selected by the user from the menu.
+#
+# @param opt: The chosen option.
+#
+function Menu_handle_option {
+	local opt=$1
+
+	case $opt in
 		"Quit")
 			echo Good bye!
 			exit
@@ -10,40 +16,40 @@ function handle_option {
 
 		"Compile SCSS")
 			clear
-			echo "SCSS Compilation [To be implemented]"
-			echo
-			show_menu
+			echo "SCSS Compilation [To be implemented]"; echo
+			Menu_show
 			;;
 
 		"Watch for changes")
 			clear
-			start_watch
+			Watch_start
 			;;
 
 		"Concat JS")
 			clear
-			concat_js
-			show_menu
+			JS_concat
+			Menu_show
 			;;
 	esac
 }
 
-
+#
 # Show an options menu.
-function show_menu {
+#
+function Menu_show {
 	# Prevent bash from treating spaces as separators.
-	OLD_IFS=${IFS}
+	local OLD_IFS=${IFS}
 	IFS=""
 
 	# Define the menu items and the prefix to the user input.
-	MENU_OPTIONS=("Concat JS" "Compile SCSS" "Watch for changes" "Quit")
+	local options=("Concat JS" "Compile SCSS" "Watch for changes" "Quit")
 	PS3="> "
 
 	# Show the options menu.
-	select opt in ${MENU_OPTIONS[@]};  do
-		handle_option $opt
+	select opt in ${options[@]};  do
+		Menu_handle_option $opt
 	done
 
-	# Restore the previous Internal Field Separator..
+	# Restore the previous Internal Field Separator.
 	IFS=OLD_IFS
 }
