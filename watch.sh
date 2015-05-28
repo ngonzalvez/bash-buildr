@@ -7,7 +7,7 @@ function Watch_start {
 	while true; do
 		filename=$(inotifywait --format %w -e close_write,create,modify,moved_to,moved_from,delete_self -q $JS_SRC)
 
-		if [ -n "$filename" ]; then JS_concat; fi
+		if [ -n "$filename" ]; then JS_compress; fi
 	done
 
 	echo Watching CSS files.

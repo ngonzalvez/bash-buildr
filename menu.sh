@@ -14,7 +14,7 @@ function Menu_handle_option {
 			exit
 			;;
 
-		"Compile CSS")
+		"Compress CSS")
 			clear
 			CSS_compress
 			Menu_show
@@ -25,9 +25,9 @@ function Menu_handle_option {
 			Watch_start
 			;;
 
-		"Concat JS")
+		"Compress JS")
 			clear
-			JS_concat
+			JS_compress
 			Menu_show
 			;;
 	esac
@@ -42,7 +42,7 @@ function Menu_show {
 	IFS=""
 
 	# Define the menu items and the prefix to the user input.
-	local options=("Concat JS" "Compile SCSS" "Watch for changes" "Quit")
+	local options=("Compress JS" "Compress CSS" "Watch for changes" "Quit")
 	PS3="> "
 
 	# Show the options menu.
